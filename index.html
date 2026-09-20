@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MTA Quran Academy | Online Quran Classes</title>
+  <meta name="description" content="MTA Quran Academy - Online Quran classes worldwide. Learn Noorani Qaida, Quran Nazra, Tajweed, Quran Translation, Namaz and 40 Hadith. Live and recorded classes available.">
+  <meta name="keywords" content="MTA Quran Academy, Online Quran Classes, Learn Quran Online, Online Quran Teacher, Quran with Tajweed, Noorani Qaida Online, Quran Nazra Online, Quran Translation, Namaz Course, 40 Hadith">
+  <meta name="author" content="MTA Quran Academy">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, "Noto Nastaliq Urdu", sans-serif;
+      line-height: 1.8;
+      color: #111827;
+      background: #f5f7fb;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1120px, 92%); margin: auto; }
+
+    header {
+      background: #05070b;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,.25);
+    }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .logo span { color: #e31b23; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      transition: .2s;
+    }
+    nav a:hover { color: #ff3131; }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #05070b 0%, #071a3d 58%, #b5121b 150%);
+      color: white;
+    }
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 70px solid rgba(227,27,35,.15);
+      border-radius: 50%;
+      left: -160px;
+      bottom: -180px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      gap: 50px;
+      position: relative;
+      z-index: 2;
+    }
+    .badge {
+      display: inline-block;
+      padding: 7px 16px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 30px;
+      margin-bottom: 18px;
+      color: #fff;
+      background: rgba(255,255,255,.08);
+    }
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: #ff3131; }
+    .hero h2 { font-size: 28px; margin-bottom: 12px; }
+    .hero p { font-size: 18px; max-width: 680px; color: #e5e7eb; }
+    .buttons { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 800;
+      border: 2px solid transparent;
+      transition: .2s;
+    }
+    .btn-red { background: #e31b23; color: white; }
+    .btn-red:hover { background: #b5121b; }
+    .btn-outline { border-color: white; color: white; }
+    .btn-outline:hover { background: white; color: #071a3d; }
+
+    .teacher-photo {
+      width: min(360px, 90vw);
+      height: 430px;
+      margin: auto;
+      border-radius: 28px;
+      object-fit: cover;
+      object-position: center;
+      border: 5px solid rgba(255,255,255,.9);
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
+      background: #dbe4f0;
+    }
+    .photo-note {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 10px;
+      color: #cbd5e1;
+    }
+
+    section { padding: 80px 0; }
+    .section-title { text-align: center; margin-bottom: 45px; }
+    .section-title h2 { font-size: 38px; color: #071a3d; }
+    .section-title p { color: #64748b; margin-top: 8px; }
+
+    .about {
+      background: white;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+    .about-box {
+      padding: 30px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border-right: 5px solid #e31b23;
+    }
+    .about-box h3 { color: #071a3d; font-size: 26px; margin-bottom: 10px; }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .course {
+      background: white;
+      border-radius: 18px;
+      padding: 26px;
+      border-top: 5px solid #071a3d;
+      box-shadow: 0 8px 25px rgba(15,23,42,.08);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .course:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(15,23,42,.14);
+    }
+    .course-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #e31b23;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+    .course h3 { color: #071a3d; font-size: 23px; margin-bottom: 8px; }
+    .course p { color: #64748b; }
+
+    .features {
+      background: #071a3d;
+      color: white;
+    }
+    .features .section-title h2 { color: white; }
+    .features .section-title p { color: #cbd5e1; }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .feature {
+      padding: 25px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      background: rgba(255,255,255,.06);
+    }
+    .feature .icon { font-size: 42px; margin-bottom: 8px; }
+    .feature h3 { margin-bottom: 6px; }
+
+    .schedule {
+      background: white;
+    }
+    .schedule-box {
+      max-width: 750px;
+      margin: auto;
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 18px;
+      border-right: 5px solid #e31b23;
+      text-align: center;
+    }
+    .schedule-box strong { color: #071a3d; }
+
+    .contact {
+      background: #f1f5f9;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .contact-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(15,23,42,.08);
+    }
+    .contact-card h3 { color: #071a3d; margin-bottom: 10px; }
+    .whatsapp {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 13px 25px;
+      background: #25D366;
+      color: white;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    .enroll {
+      background: linear-gradient(135deg, #e31b23, #071a3d);
+      color: white;
+      text-align: center;
+    }
+    .enroll h2 { font-size: 40px; margin-bottom: 12px; }
+    .enroll p { max-width: 700px; margin: 0 auto 25px; color: #f8fafc; }
+
+    footer {
+      background: #05070b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 28px 0;
+    }
+    footer strong { color: white; }
+
+    @media (max-width: 850px) {
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding: 70px 0; }
+      .hero-grid { text-align: center; }
+      .buttons { justify-content: center; }
+      .courses-grid, .feature-grid { grid-template-columns: 1fr 1fr; }
+      nav ul { display: none; }
+    }
+    @media (max-width: 560px) {
+      section { padding: 60px 0; }
+      .courses-grid, .feature-grid { grid-template-columns: 1fr; }
+      .teacher-photo { height: 380px; }
+      .section-title h2 { font-size: 30px; }
+      .enroll h2 { font-size: 31px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">MTA <span>Quran</span> Academy</a>
+    <nav>
+      <ul>
+        <li><a href="#home">ہوم</a></li>
+        <li><a href="#courses">کورسز</a></li>
+        <li><a href="#classes">کلاسز</a></li>
+        <li><a href="#about">ہمارے بارے میں</a></li>
+        <li><a href="#contact">رابطہ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">آن لائن قرآن ٹیچنگ اکیڈمی</span>
+        <h1>MTA <span>Quran</span> Academy</h1>
+        <h2>Online Quran Teaching & Classes</h2>
+        <p>
+          دنیا بھر میں قرآنِ پاک سیکھنے کے لیے آن لائن کلاسز۔
+          Live اور Recorded Classes کے ذریعے نورانی قائدہ، ناظرہ، تجوید،
+          ترجمۃ القرآن، نماز اور چالیس احادیث کے کورسز۔
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-red" href="https://wa.me/923360707092" target="_blank">WhatsApp پر رابطہ کریں</a>
+          <a class="btn btn-outline" href="#courses">کورسز دیکھیں</a>
+        </div>
+      </div>
+
+      <div>
+        <!-- اپنی تصویر کا نام profile.jpg رکھ کر اسی GitHub repository میں upload کریں -->
+        <img class="teacher-photo" src="profile.jpg" alt="MTA Quran Academy Teacher">
+        <div class="photo-note">MTA Quran Academy</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>ہمارے بارے میں</h2>
+        <p>قرآنِ پاک کی تعلیم آسان اور جدید انداز میں</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-box">
+          <h3>MTA Quran Academy</h3>
+          <p>
+            ہمارا مقصد طلبہ کو قرآنِ پاک پڑھنے، صحیح تلفظ، تجوید اور بنیادی
+            دینی تعلیم سیکھنے میں مدد فراہم کرنا ہے۔ کلاسز آن لائن ہوتی ہیں
+            تاکہ دنیا کے مختلف ممالک سے طلبہ آسانی سے شامل ہو سکیں۔
+          </p>
+        </div>
+
+        <div class="about-box">
+          <h3>Live & Recorded Classes</h3>
+          <p>
+            طلبہ کے لیے Live Classes کے ساتھ Recorded Lessons بھی فراہم کیے
+            جا سکتے ہیں، تاکہ سبق کو دوبارہ دیکھ کر اپنی مشق بہتر کی جا سکے۔
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="container">
+      <div class="section-title">
+        <h2>ہمارے کورسز</h2>
+        <p>اپنی ضرورت کے مطابق قرآن اور دینی تعلیم کا کورس منتخب کریں</p>
+      </div>
+
+      <div class="courses-grid">
+
+        <article class="course">
+          <div class="course-number">1</div>
+          <h3>نورانی قائدہ</h3>
+          <p>ابتدائی طلبہ کے لیے حروف، حرکات، جوڑ اور قرآنِ پاک کی درست پڑھائی کی بنیاد۔</p>
+        </article>
+
+        <article class="course">
+          <div class="course-number">2</div>
+          <h3>ناظرہ قرآن</h3>
+          <p>قرآنِ پاک کو روانی، درست مخارج اور بنیادی قواعد کے ساتھ پڑھنے کی مشق۔</p>
+        </article>
+
+        <article class="course">
+          <div class="course-number">3</div>
+          <h3>تجوید</h3>
+          <p>مخارج، صفات اور قرآنِ پاک کی تلاوت کے بنیادی تجویدی اصول سیکھیں۔</p>
+        </article>
+
+        <article class="course">
+          <div class="course-number">4</div>
+          <h3>ترجمۃ القرآن</h3>
+          <p>قرآنِ پاک کے منتخب حصوں کا آسان انداز میں ترجمہ اور مفہوم سمجھنے کی تعلیم۔</p>
+        </article>
+
+        <article class="course">
+          <div class="course-number">5</div>
+          <h3>نماز کورس</h3>
+          <p>نماز کے بنیادی مسائل، ارکان، اذکار اور نماز درست طریقے سے ادا کرنے کی تعلیم۔</p>
+        </article>
+
+        <article class="course">
+          <div class="course-number">6</div>
+          <h3>چالیس احادیث</h3>
+          <p>منتخب احادیثِ مبارکہ کے ذریعے بنیادی اسلامی تعلیمات اور عملی زندگی کی رہنمائی۔</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="classes">
+    <div class="container">
+      <div class="section-title">
+        <h2>آن لائن کلاسز</h2>
+        <p>Live اور Recorded learning کا آسان طریقہ</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="icon">🎥</div>
+          <h3>Live Classes</h3>
+          <p>استاد کے ساتھ براہِ راست آن لائن کلاس میں شرکت کریں۔</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">▶️</div>
+          <h3>Recorded Classes</h3>
+          <p>ریکارڈ شدہ اسباق کو اپنی سہولت کے مطابق دوبارہ دیکھیں۔</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">🌍</div>
+          <h3>Worldwide</h3>
+          <p>دنیا کے مختلف ممالک سے طلبہ آن لائن رابطہ کر سکتے ہیں۔</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schedule">
+    <div class="container">
+      <div class="section-title">
+        <h2>کلاسز کا شیڈول</h2>
+        <p>ہفتے میں 3 دن کلاسز</p>
+      </div>
+
+      <div class="schedule-box">
+        <p><strong>کلاسز:</strong> ہفتے میں 3 دن</p>
+        <p>کلاس کا مناسب وقت طالب علم اور استاد کی باہمی سہولت کے مطابق طے کیا جا سکتا ہے۔</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>رابطہ کریں</h2>
+        <p>داخلہ یا مزید معلومات کے لیے WhatsApp پر رابطہ کریں</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>WhatsApp</h3>
+          <p>0336 0707092</p>
+          <a class="whatsapp" href="https://wa.me/923360707092" target="_blank">WhatsApp Message</a>
+        </div>
+
+        <div class="contact-card">
+          <h3>MTA Quran Academy</h3>
+          <p>Online Quran Teaching</p>
+          <p>Live & Recorded Classes</p>
+          <p>Worldwide Online Learning</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="enroll" id="enroll">
+    <div class="container">
+      <h2>آج ہی داخلہ لیں</h2>
+      <p>
+        قرآنِ پاک سیکھنے کے لیے MTA Quran Academy سے رابطہ کریں۔
+        کورس اور کلاس ٹائم کی معلومات WhatsApp پر حاصل کریں۔
+      </p>
+      <a class="btn btn-outline" href="https://wa.me/923360707092?text=Assalam-o-Alaikum%2C%20I%20want%20to%20enroll%20in%20MTA%20Quran%20Academy." target="_blank">
+        Enroll Now
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>MTA Quran Academy</strong></p>
+    <p>Online Quran Teaching | Live & Recorded Classes</p>
+    <p>© 2026 MTA Quran Academy. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
